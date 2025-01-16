@@ -8,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'orient-mock-project-ui';
+  
+  isLoggedIn = sessionStorage.getItem('token') !== null;
 }

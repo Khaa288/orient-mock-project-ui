@@ -5,16 +5,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthenticationModule } from '../features/authentication/authentication.module';
 import { CoreModule } from '../core/core.module';
+import { HomeModule } from '../features/home/home.module';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
+    CoreModule,
     BrowserModule,
     AppRoutingModule,
     AuthenticationModule,
-    CoreModule
+    HomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
