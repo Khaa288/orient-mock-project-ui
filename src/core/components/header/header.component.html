@@ -1,4 +1,19 @@
 <header class="header">
     <div class="header-logo">Netqueo</div>
-    <a class="header-login-btn" href="auth/login">Login</a>
+    <button 
+        *ngIf="!isLoggedIn; else loggedOut"
+        class="header-login-btn" 
+        [routerLink]="['/auth/login']"
+    >
+        Login
+    </button>
 </header>
+
+<ng-template #loggedOut>
+    <button 
+        class="header-logout-btn" 
+        [routerLink]="['/']"
+    >
+        Logout
+    </button>
+</ng-template>

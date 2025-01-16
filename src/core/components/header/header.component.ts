@@ -8,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+  isLoggedIn = false;
 
+  constructor() {
+    this.isLoggedIn = sessionStorage.getItem('token') !== null;
+  }
 }

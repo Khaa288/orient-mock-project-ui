@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { ApiService } from './services/api-service/api.service';
+import { RouterLink } from '@angular/router';
+import { provideHttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -9,11 +11,13 @@ import { ApiService } from './services/api-service/api.service';
   ],
   
   providers: [
-    ApiService
+    ApiService,
+    provideHttpClient()
   ],
 
   imports: [
-    CommonModule
+    CommonModule,
+    RouterLink
   ],
 
   exports: [
